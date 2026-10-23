@@ -1,0 +1,13 @@
+# Netlify support (alternative host). Vercel is the recommended host for this
+# project — see README. Netlify detects Next.js and applies its runtime automatically.
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NEXT_TELEMETRY_DISABLED = "1"
+
+# Note: the daily keep-alive job in vercel.json only runs on Vercel. On Netlify, use a
+# free external pinger (e.g. cron-job.org) that calls:
+#   https://YOUR-SITE/api/keep-alive?secret=YOUR_CRON_SECRET
